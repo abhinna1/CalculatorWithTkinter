@@ -19,7 +19,7 @@ def add(): #Function for addition button
     first_number = screen.get()
     global f_num
     global operation
-    f_num = int(first_number)
+    f_num = float(first_number)
     operation='add'
     screen.delete(0, END)
 
@@ -27,7 +27,7 @@ def substract(): #Function for substraction button
     first_number = screen.get()
     global f_num
     global operation
-    f_num = int(first_number)
+    f_num = float(first_number)
     operation='substract'
     screen.delete(0, END)
 
@@ -35,7 +35,7 @@ def multiply(): #Function for multiplication button
     first_number = screen.get()
     global f_num
     global operation
-    f_num = int(first_number)
+    f_num = float(first_number)
     operation='multiply'
     screen.delete(0, END)
 
@@ -43,7 +43,7 @@ def divide(): #Function for division button
     first_number = screen.get()
     global f_num
     global operation
-    f_num = int(first_number)
+    f_num = float(first_number)
     operation='divide'
     screen.delete(0, END)
 
@@ -104,10 +104,11 @@ btn_8.grid(row=3, column=1,padx=0,pady=0)
 btn_9 = Button(text='9',width=10,height=3,command=lambda : take_num(9),bg='gray29',fg='Orange')
 btn_9.grid(row=3, column=2,padx=0,pady=0)
 
-
 btn_0=Button(text='0',width=10,height=3,command=lambda : take_num(0),bg='gray29',fg='Orange')
 btn_0.grid(row=4,column=0,padx=0,pady=0)
 
+btn_point=Button(text='.',width=10,height=3,command=lambda : take_num('.'),bg='gray29',fg='Orange')
+btn_point.grid(row=1,column=3,padx=0,pady=0)
 
 
 #Mathematical Operation Buttons
@@ -127,7 +128,7 @@ btn_divide.grid(row=3,column=3,padx=0,pady=0)
 btn_equal=Button(text='=',width=10,height=3,command=equal,bg='gray29',fg='Orange')
 btn_equal.grid(row=4,column=3,padx=0,pady=0)
 
-btn_cls=Button(text='C',width=10,height=3,command=clearScreen,bg='gray89',fg='Red')
-btn_cls.grid(row=1,column=3,padx=0,pady=0)
+btn_cls=Button(text='Clear Screen',width=45,height=3,command=clearScreen,bg='gray89',fg='Red')
+btn_cls.grid(row=5,column=0,padx=0,pady=0,columnspan=4)
 
 root.mainloop()
